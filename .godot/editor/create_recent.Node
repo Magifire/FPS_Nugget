@@ -1,3 +1,4 @@
-Camera3D
 CollisionShape3D
+StaticBody3D
+Camera3D
 CharacterBody3D
