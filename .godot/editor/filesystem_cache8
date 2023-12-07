@@ -1,5 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1701890956
-CharacterBody3D.gd::GDScript::-1::1701719115::0::1::::<>CharacterBody3D<>::
-character_body_3d.tscn::PackedScene::8831241556103993223::1701719247::0::1::::<><>::res://CharacterBody3D.gd
+::res://::1701966715
+CharacterBody3D.gd::GDScript::-1::1701892110::0::1::::<>CharacterBody3D<>::
+character_body_3d.tscn::PackedScene::8831241556103993223::1701892113::0::1::::<><>::res://CharacterBody3D.gd
+debug_level_1.tscn::PackedScene::6209863974427271446::1701892110::0::1::::<><>::
 icon.svg::CompressedTexture2D::3752356194317669159::1701718416::1701718425::1::::<><>::

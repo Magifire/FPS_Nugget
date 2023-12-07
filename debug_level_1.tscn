@@ -1,4 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cuqds1s80nfkw"]
+[gd_scene load_steps=4 format=3 uid="uid://cuqds1s80nfkw"]
+
+[ext_resource type="Material" uid="uid://dlqm56anxcwlf" path="res://testMaterial.tres" id="1_3riu3"]
+[ext_resource type="PackedScene" uid="uid://dx26i1pb38kjf" path="res://character_body_3d.tscn" id="2_r2mmk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ig4xm"]
 
@@ -15,3 +18,9 @@ axis_lock_angular_z = true
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(25, 0, 0, 0, 1, 0, 0, 0, 25, 0, 0, 0)
 shape = SubResource("BoxShape3D_ig4xm")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+material_overlay = ExtResource("1_3riu3")
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("2_r2mmk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.99706, 0)
