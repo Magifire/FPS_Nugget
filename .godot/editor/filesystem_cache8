@@ -1,8 +1,9 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1702878061
-CharacterBody3D.gd::GDScript::-1::1702853436::0::1::::<>CharacterBody3D<>::
+::res://::1702929243
+CharacterBody3D.gd::GDScript::-1::1702881297::0::1::::<>CharacterBody3D<>::
 character_body_3d.tscn::PackedScene::8831241556103993223::1702877689::0::1::::<><>::res://CharacterBody3D.gd<>uid://b3nddtah4cham::::res://Art/Player/chickenz.tscn
-debug_level_1.tscn::PackedScene::6209863974427271446::1702877850::0::1::::<><>::uid://br7ql35iolv58::::res://Art/Enviornment/kenney_prototype-textures/PNG/Light/texture_07.png<>uid://dx26i1pb38kjf::::res://character_body_3d.tscn<>uid://iwqw58dpnjc0::::res://Art/Skybox/free_-_skybox_space_nebula.glb
+debug_level_1.gd::GDScript::-1::1702881717::0::1::::<>Node3D<>::
+debug_level_1.tscn::PackedScene::6209863974427271446::1702881297::0::1::::<><>::res://debug_level_1.gd<>uid://br7ql35iolv58::::res://Art/Enviornment/kenney_prototype-textures/PNG/Light/texture_07.png<>uid://dx26i1pb38kjf::::res://character_body_3d.tscn<>uid://iwqw58dpnjc0::::res://Art/Skybox/free_-_skybox_space_nebula.glb
 icon.svg::CompressedTexture2D::3752356194317669159::1702846332::1702846332::1::::<><>::
 ::res://Art/::1702877994
 ::res://Art/Enviornment/::1702877994
@@ -188,7 +189,8 @@ wall-opening.png::CompressedTexture2D::8232443444409328732::1702877973::17028779
 wall.png::CompressedTexture2D::6753948787056607617::1702877973::1702877995::1::::<><>::
 wood-structure.png::CompressedTexture2D::7097524783611315037::1702877973::1702877995::1::::<><>::
 wood-support.png::CompressedTexture2D::4554246093292816611::1702877973::1702877995::1::::<><>::
-::res://Art/Enviornment/kenney_prototype-textures/::1702850702
+::res://Art/Enviornment/kenney_prototype-textures/::1702878253
+License.txt::TextFile::-1::1702849474::0::1::::<><>::
 ::res://Art/Enviornment/kenney_prototype-textures/PNG/::1702849475
 ::res://Art/Enviornment/kenney_prototype-textures/PNG/Dark/::1702876389
 texture_01.png::CompressedTexture2D::8920057850956490764::1702849474::1702876389::1::::<><>::
@@ -295,8 +297,6 @@ chickenz.tscn::PackedScene::4378733723021340136::1702877689::0::1::::<><>::
 free_-_skybox_space_nebula.glb::PackedScene::607939445879668089::1702877281::1702877289::1::::<><>::uid://blk7lydp36ccm::::res://Art/Skybox/free_-_skybox_space_nebula_0.jpg
 free_-_skybox_space_nebula_0.jpg::CompressedTexture2D::3181105594668522032::1702877281::1702877288::1::::<><>::
 License (Nebula Skybox).txt::TextFile::-1::1702877387::0::1::::<><>::
-::res://kenney_prototype-textures/::1702878061
-License.txt::TextFile::-1::1702849474::0::1::::<><>::
 ::res://Project Dependencies/::1702876284
 ::res://Project Dependencies/FBX2glTF-windows-x86_64/::1702849671
 ::res://Project Dependencies/FBX2glTF-windows-x86_64/FBX2glTF-windows-x86_64/::1702849671
