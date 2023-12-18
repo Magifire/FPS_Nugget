@@ -1,6 +1,5 @@
 extends CharacterBody3D
 
-
 const SPEED = 7.5
 const JUMP_VELOCITY = 9
 
