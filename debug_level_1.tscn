@@ -37,7 +37,6 @@ mesh = SubResource("BoxMesh_dmje7")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.991349, 0.131253, 0, -0.131253, 0.991349, 0, 29.7254, 0)
-sky_mode = 1
 
 [node name="Sketchfab_Scene" parent="." instance=ExtResource("3_x1o4h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.0592, 17.9548, -40.0645)
