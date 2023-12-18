@@ -1,2 +1,6 @@
 res://debug_level_1.tscn
+res://chickenz.tscn
 res://character_body_3d.tscn
+res://CharacterBody3D.gd
+res://Art/Player/chickenz.tscn
+res://Art/Skybox/License (Nebula Skybox).txt

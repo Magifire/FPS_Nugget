@@ -1,13 +1,25 @@
-[gd_scene load_steps=4 format=3 uid="uid://cuqds1s80nfkw"]
+[gd_scene load_steps=7 format=3 uid="uid://cuqds1s80nfkw"]
 
-[ext_resource type="Material" uid="uid://dlqm56anxcwlf" path="res://testMaterial.tres" id="1_3riu3"]
+[ext_resource type="Texture2D" uid="uid://br7ql35iolv58" path="res://Art/Enviornment/kenney_prototype-textures/PNG/Light/texture_07.png" id="2_p4kxf"]
 [ext_resource type="PackedScene" uid="uid://dx26i1pb38kjf" path="res://character_body_3d.tscn" id="2_r2mmk"]
+[ext_resource type="PackedScene" uid="uid://iwqw58dpnjc0" path="res://Art/Skybox/free_-_skybox_space_nebula.glb" id="3_x1o4h"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ig4xm"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6lopv"]
+albedo_texture = ExtResource("2_p4kxf")
+uv1_scale = Vector3(15, 10, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dmje7"]
 
 [node name="Debug Level1" type="Node3D"]
 
+[node name="CharacterBody3D" parent="." instance=ExtResource("2_r2mmk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0801506, 14.0433, 0.0909195)
+
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 axis_lock_linear_x = true
 axis_lock_linear_y = true
 axis_lock_linear_z = true
@@ -16,11 +28,16 @@ axis_lock_angular_y = true
 axis_lock_angular_z = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(25, 0, 0, 0, 1, 0, 0, 0, 25, 0, 0, 0)
 shape = SubResource("BoxShape3D_ig4xm")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
-material_overlay = ExtResource("1_3riu3")
+transform = Transform3D(60, 0, 0, 0, 2, 0, 0, 0, 60, 0.16547, 0.0435162, -0.00362776)
+material_override = SubResource("StandardMaterial3D_6lopv")
+mesh = SubResource("BoxMesh_dmje7")
 
-[node name="CharacterBody3D" parent="." instance=ExtResource("2_r2mmk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.99706, 0)
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.991349, 0.131253, 0, -0.131253, 0.991349, 0, 29.7254, 0)
+sky_mode = 1
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("3_x1o4h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.0592, 17.9548, -40.0645)
