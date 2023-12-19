@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cuqds1s80nfkw"]
+[gd_scene load_steps=9 format=3 uid="uid://cuqds1s80nfkw"]
 
-[ext_resource type="Script" path="res://debug_level_1.gd" id="1_5pdit"]
+[ext_resource type="Script" path="res://start.gd" id="1_64rp3"]
 [ext_resource type="Texture2D" uid="uid://br7ql35iolv58" path="res://Art/Enviornment/kenney_prototype-textures/PNG/Light/texture_07.png" id="2_p4kxf"]
 [ext_resource type="PackedScene" uid="uid://dx26i1pb38kjf" path="res://character_body_3d.tscn" id="2_r2mmk"]
 [ext_resource type="PackedScene" uid="uid://iwqw58dpnjc0" path="res://Art/Skybox/free_-_skybox_space_nebula.glb" id="3_x1o4h"]
+[ext_resource type="PackedScene" uid="uid://cyvbde36f8s82" path="res://start.tscn" id="5_pkg3c"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ig4xm"]
 size = Vector3(60, 2, 60)
@@ -15,7 +16,7 @@ uv1_scale = Vector3(15, 10, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_dmje7"]
 
 [node name="Debug Level1" type="Node3D"]
-script = ExtResource("1_5pdit")
+script = ExtResource("1_64rp3")
 
 [node name="Player" parent="." instance=ExtResource("2_r2mmk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0801506, 14.0433, 0.0909195)
@@ -42,3 +43,5 @@ transform = Transform3D(1, 0, 0, 0, 0.991349, 0.131253, 0, -0.131253, 0.991349, 
 
 [node name="Skybox" parent="." instance=ExtResource("3_x1o4h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.0592, 17.9548, -40.0645)
+
+[node name="Start GUI" parent="." instance=ExtResource("5_pkg3c")]
