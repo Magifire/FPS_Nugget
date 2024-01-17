@@ -1,5 +1,7 @@
-Control
 Button
+Label
+LineEdit
+Control
 Node3D
 DirectionalLight3D
 MeshInstance3D

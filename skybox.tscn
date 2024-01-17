@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://c28ynjk0rc0rc"]
+
+[ext_resource type="PackedScene" uid="uid://iwqw58dpnjc0" path="res://Art/Skybox/free_-_skybox_space_nebula.glb" id="1_g2761"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_g2761")]
