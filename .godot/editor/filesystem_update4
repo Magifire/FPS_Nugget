@@ -1,6 +1,5 @@
+res://character_body_3d.tscn
+res://Art/Player/chickenz.tscn
 res://debug_level_1.tscn
 res://Menu.tscn
 res://Menu.gd
-res://character_body_3d.tscn
-res://Art/Player/chickenz.tscn
-res://CharacterBody3D.gd
