@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_gkouu"]
 
-[node name="Control" type="Control"]
+[node name="Main Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -64,3 +64,4 @@ text = "Host
 "
 
 [connection signal="button_up" from="Connect" to="." method="_on_connect_button_up"]
+[connection signal="button_up" from="Host" to="." method="_on_host_button_up"]

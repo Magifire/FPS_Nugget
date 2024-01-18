@@ -1,10 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1705331439
+::res://::1705542890
 CharacterBody3D.gd::GDScript::-1::1705031817::0::1::::<>CharacterBody3D<>::
 character_body_3d.tscn::PackedScene::8831241556103993223::1705031817::0::1::::<><>::res://CharacterBody3D.gd<>uid://b3nddtah4cham::::res://Art/Player/chickenz.tscn
-debug_level_1.tscn::PackedScene::6209863974427271446::1705112274::0::1::::<><>::uid://br7ql35iolv58::::res://Art/Enviornment/kenney_prototype-textures/PNG/Light/texture_07.png<>uid://dx26i1pb38kjf::::res://character_body_3d.tscn<>uid://iwqw58dpnjc0::::res://Art/Skybox/free_-_skybox_space_nebula.glb
+debug_level_1.tscn::PackedScene::6209863974427271446::1705356786::0::1::::<><>::uid://br7ql35iolv58::::res://Art/Enviornment/kenney_prototype-textures/PNG/Light/texture_07.png<>uid://dx26i1pb38kjf::::res://character_body_3d.tscn<>uid://iwqw58dpnjc0::::res://Art/Skybox/free_-_skybox_space_nebula.glb
 icon.svg::CompressedTexture2D::3752356194317669159::1705031817::1705031817::1::::<><>::
-start.tscn::PackedScene::1778179036821806271::1705112178::0::1::::<><>::
+Menu.gd::GDScript::-1::1705356786::0::1::::<>Control<>::
+Menu.tscn::PackedScene::3218101074131986023::1705356786::0::1::::<><>::res://Menu.gd
+skybox.tscn::PackedScene::6737545523961114728::1705331748::0::1::::<><>::uid://iwqw58dpnjc0::::res://Art/Skybox/free_-_skybox_space_nebula.glb
 ::res://Art/::1705031817
 ::res://Art/Enviornment/::1705031817
 ::res://Art/Enviornment/kenney_conveyor-kit/::1705031817
