@@ -1,38 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://cuqds1s80nfkw"]
 
+[ext_resource type="Script" path="res://debug_level_1.gd" id="1_br8vf"]
 [ext_resource type="Texture2D" uid="uid://br7ql35iolv58" path="res://Art/Enviornment/kenney_prototype-textures/PNG/Light/texture_07.png" id="2_p4kxf"]
 [ext_resource type="PackedScene" uid="uid://iwqw58dpnjc0" path="res://Art/Skybox/free_-_skybox_space_nebula.glb" id="3_x1o4h"]
-
-[sub_resource type="GDScript" id="GDScript_82tah"]
-script/source = "extends Node
-
-var LocalPlayer = preload(\"res://character_body_3d.tscn\").instantiate()
-
-func _ready():
-	var root = get_tree().root
-	var menu = root.get_node(\"Main Menu\")
-	
-	LocalPlayer.name = \"Player\"
-	
-	multiplayer.multiplayer_peer = null
-	var peer = ENetMultiplayerPeer.new()
-	
-	if menu.connHost == 0:
-		var localIP = IP.resolve_hostname(str(OS.get_environment(\"COMPUTERNAME\")),1)
-		print(localIP)
-		peer.create_client(\"10.142.24.149\", int(menu.port))
-		multiplayer.multiplayer_peer = peer
-	elif menu.connHost == 1:
-		#peer.set_bind_ip(\"127.0.0.1\")
-		print(peer.create_server(7355, 16))
-	
-	#while(peer.get_connection_status() != 2):
-	#	print(peer.get_connection_status())
-	
-	root.get_node(\"Debug Level1\").get_node(\"Player Spawner\").add_child(LocalPlayer)
-	
-	root.remove_child(menu)
-"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ig4xm"]
 size = Vector3(60, 2, 60)
@@ -44,7 +14,7 @@ uv1_scale = Vector3(15, 10, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_dmje7"]
 
 [node name="Debug Level1" type="Node3D"]
-script = SubResource("GDScript_82tah")
+script = ExtResource("1_br8vf")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
