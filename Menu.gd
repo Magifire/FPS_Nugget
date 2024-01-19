@@ -12,9 +12,6 @@ func _on_connect_button_up():
 	port = $"Port Input".get_text()
 	var root = get_tree().root
 	root.add_child(debug_level)
-	
-	
-
 
 func _on_host_button_up():
 	connHost = 1
