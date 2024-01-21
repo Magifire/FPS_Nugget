@@ -8,29 +8,18 @@ func _ready():
 	var root = get_tree().root
 	var menu = root.get_node("Main Menu")
 	
-	LocalPlayer.name = "Player"
-	
 	multiplayer.multiplayer_peer = null
 	var peer = ENetMultiplayerPeer.new()
 	
 	if menu.connHost == 0:
-		var localIP = IP.resolve_hostname(str(OS.get_environment("COMPUTERNAME")),1)
-		#print(localIP)
-		var error = peer.create_client("127.0.0.1", 7355)
-		if error:
-			print(error)
-			return error
+		peer.create_client("127.0.0.1", 7355)
 		multiplayer.multiplayer_peer = peer
 	elif menu.connHost == 1:
-		#peer.set_bind_ip("127.0.0.1")
-		print(peer.create_server(7355, 16))
+		peer.create_server(7355, 16)
+		multiplayer.multiplayer_peer = peer
 	
-	#while(peer.get_connection_status() != 2):
-	#	print(peer.get_connection_status())
-	
+	#$"MultiplayerSpawner".set_multiplayer_authority(peer.get_unique_id())
+	LocalPlayer.name = "Player" + str(peer.get_unique_id())
 	root.get_node("Debug Level1").get_node("Player Spawner").add_child(LocalPlayer)
 	
 	root.remove_child(menu)
-
-func _on_connection_failed():
-	print("e")
