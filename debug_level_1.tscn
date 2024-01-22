@@ -43,8 +43,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.0592, 17.9548, -40.0645)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 109.245, 0)
 
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
-process_mode = 3
-process_priority = -2
-process_physics_priority = -2
 _spawnable_scenes = PackedStringArray("res://character_body_3d.tscn")
-spawn_path = NodePath("../Player Spawner")
+spawn_path = NodePath("..")
