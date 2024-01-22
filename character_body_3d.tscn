@@ -7,9 +7,9 @@
 radius = 0.858018
 height = 1.98318
 
-[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_vwr41"]
-properties/0/path = NodePath(".:position")
-properties/0/spawn = false
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_fuj5h"]
+properties/0/path = NodePath(".:rotation")
+properties/0/spawn = true
 properties/0/replication_mode = 1
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
@@ -29,4 +29,4 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1, 
 [node name="Chicken" parent="Pivot" instance=ExtResource("2_37stb")]
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
-replication_config = SubResource("SceneReplicationConfig_vwr41")
+replication_config = SubResource("SceneReplicationConfig_fuj5h")

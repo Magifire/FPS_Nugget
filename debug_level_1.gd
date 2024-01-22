@@ -12,7 +12,10 @@ func _ready():
 	var peer = ENetMultiplayerPeer.new()
 	
 	if menu.connHost == 0:
-		peer.create_client("127.0.0.1", 7355)
+		if menu.ip == "":
+			peer.create_client("127.0.0.1", 7355)
+		else:
+			peer.create_client(menu.ip, 7355)
 		multiplayer.multiplayer_peer = peer
 	elif menu.connHost == 1:
 		peer.create_server(7355, 16)
@@ -20,6 +23,7 @@ func _ready():
 	
 	#$"MultiplayerSpawner".set_multiplayer_authority(peer.get_unique_id())
 	LocalPlayer.name = "Player" + str(peer.get_unique_id())
+	LocalPlayer.set_multiplayer_authority(peer.get_unique_id(), true)
 	root.get_node("Debug Level1").get_node("Player Spawner").add_child(LocalPlayer)
 	
 	root.remove_child(menu)
