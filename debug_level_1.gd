@@ -28,11 +28,14 @@ func _ready():
 	
 	var config = SceneReplicationConfig.new()
 	
+	var playerPath = "Player" + str(multiplayer.multiplayer_peer.get_unique_id())
+	#print(root.get_node("Debug Level1").get_node("Player Spawner").get_node(playerPath).get_path())
+	multiplayer_synchronizer.set_root_path("/root/Debug Level1/Player Spawner/" + playerPath)
+	
 	for property in ['position', 'rotation']:
-		config.add_property(str(root.get_path, ':',property))
+		config.add_property(str(multiplayer_synchronizer.get_root_path(), ':',property))
 	
 	multiplayer_synchronizer.replication_config = config
-	var playerPath = "Player" + str(multiplayer.multiplayer_peer.get_unique_id())
-	multiplayer_synchronizer.set_root_path(root.get_node(playerPath).get_path())
+	
 	
 	root.remove_child(menu)
