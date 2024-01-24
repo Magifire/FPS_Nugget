@@ -42,7 +42,7 @@ func _input(event):
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 			#get_tree().set_input_as_handled() use if needed, atm Idk what it does tbh
 		
-	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and (get_multiplayer_authority() == multiplayer.multiplayer_peer.get_unique_id()):
 		rotate_y(-event.relative.x * mouse_sens)
 		$Camera3D.rotate_x(-event.relative.y * mouse_sens)
 		$Camera3D.rotation.x = clampf($Camera3D.rotation.x, -deg_to_rad(90), deg_to_rad(90))

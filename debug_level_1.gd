@@ -19,6 +19,10 @@ func _ready():
 		peer.create_server(7355, 16)
 		multiplayer.multiplayer_peer = peer
 	
+	#$"MultiplayerSpawner".set_multiplayer_authority(peer.get_unique_id())
+	
+	multiplayer.connect("peer_connected", _on_peer_connected)
+	
 	LocalPlayer.name = "Player" + str(peer.get_unique_id())
 	LocalPlayer.set_multiplayer_authority(peer.get_unique_id(), true)
 	root.get_node("Debug Level1").get_node("Player Spawner").add_child(LocalPlayer)
@@ -28,7 +32,7 @@ func _ready():
 	
 	var config = SceneReplicationConfig.new()
 	
-	var playerPath = "Player" + str(multiplayer.multiplayer_peer.get_unique_id())
+	var playerPath = "Player" #+ str(multiplayer.multiplayer_peer.get_unique_id())
 	#print(root.get_node("Debug Level1").get_node("Player Spawner").get_node(playerPath).get_path())
 	multiplayer_synchronizer.set_root_path("/root/Debug Level1/Player Spawner/" + playerPath)
 	
@@ -36,6 +40,12 @@ func _ready():
 		config.add_property(str(multiplayer_synchronizer.get_root_path(), ':',property))
 	
 	multiplayer_synchronizer.replication_config = config
-	
+	multiplayer_synchronizer.set_multiplayer_authority(peer.get_unique_id(), true)
 	
 	root.remove_child(menu)
+
+func _on_peer_connected(id):
+	print(str(id))
+
+func _on_multiplayer_spawner_spawned(node):
+	print(node.name + " " + str(multiplayer.multiplayer_peer.get_unique_id()))
